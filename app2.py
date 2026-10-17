@@ -99,7 +99,7 @@ def poster_grid(cards, cols=6, key_prefix="grid"):
 
             with colset[c]:
                 if poster:
-                    st.image(poster, use_container_width=True)
+                    st.image(poster, use_column_width=True)
                 else:
                     st.write("🖼️ No poster")
 
@@ -214,7 +214,7 @@ with left:
     )
 
 with menu_col:
-    with st.popover("☰ Menu", use_container_width=True):
+    with st.popover("☰ Menu", use_column_width=True):
         st.markdown("### Home Feed")
         home_category = st.selectbox(
             "Category",
@@ -225,7 +225,7 @@ with menu_col:
         grid_cols = st.slider("Grid columns", 4, 8, 6, key="grid_cols")
 
 with home_col:
-    if st.button("← Back to Home", use_container_width=True):
+    if st.button("← Back to Home", use_column_width=True):
         goto_home()
 
 st.divider()
@@ -306,7 +306,7 @@ elif st.session_state.view == "details":
     with left:
         st.markdown("<div class='card'>", unsafe_allow_html=True)
         if data.get("poster_url"):
-            st.image(data["poster_url"], use_container_width=True)
+            st.image(data["poster_url"], use_column_width=True)
         else:
             st.write("🖼️ No poster")
         st.markdown("</div>", unsafe_allow_html=True)
@@ -329,7 +329,7 @@ elif st.session_state.view == "details":
 
     if data.get("backdrop_url"):
         st.markdown("#### Backdrop")
-        st.image(data["backdrop_url"], use_container_width=True)
+        st.image(data["backdrop_url"], use_column_width=True)
 
     st.divider()
     st.markdown("### ✅ Recommendations")
