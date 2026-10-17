@@ -1,9 +1,28 @@
+
+# Virtual environment
 .venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python cache files
 __pycache__/
 *.py[cod]
-.env
+*$py.class
+
+# Jupyter Notebook
 .ipynb_checkpoints/
-df.pkl
-indices.pkl
-tfidf_matrix.pkl
-tfidf.pkl
+
+# IDE settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
