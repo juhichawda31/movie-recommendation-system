@@ -214,7 +214,7 @@ with left:
     )
 
 with menu_col:
-    with st.popover("☰ Menu", use_column_width=True):
+    with st.popover("☰ Menu"):
         st.markdown("### Home Feed")
         home_category = st.selectbox(
             "Category",
@@ -225,7 +225,7 @@ with menu_col:
         grid_cols = st.slider("Grid columns", 4, 8, 6, key="grid_cols")
 
 with home_col:
-    if st.button("← Back to Home", use_column_width=True):
+    if st.button("← Back to Home"):
         goto_home()
 
 st.divider()
